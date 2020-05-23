@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Qualimax</string>
+    <!-- Strings related to login -->
+    <string name="nomeLogin">Nome</string>
+    <string name="senhaLogin">Senha</string>
+    <string name="action_sign_in">Enviar</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Bem vindo ! "</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="bem_vindo_adm">Bem Vindo Adm</string>
+    <string name="pontos_com_maquinas_j_instaladas">Pontos com Maquinas já instaladas</string>
+    <string name="cadastrar_ponto">Cadastrar Ponto</string>
+    <string name="controle_de_vendas">Controle de Vendas</string>
+    <string name="cadastrar_maquina">Cadastrar Maquina</string>
+    <string name="gerenciar_dados">Gerenciar Dados</string>
+    <string name="cadastrarPonto">Cadastrar Ponto</string>
+
+</resources>

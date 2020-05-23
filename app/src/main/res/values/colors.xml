@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#007FEB</color>
+    <color name="colorPrimaryDark">#BCE0FD</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="caixaTexto">#FFFFFF</color>
+    <color name="corBotao">#2699FB</color>
+
+</resources>
