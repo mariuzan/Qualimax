@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data.CadastrarMaquina"
+    tools:context=".data.CadastrarPonto"
     android:background="@color/colorPrimaryDark">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -93,46 +93,46 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <EditText
-            android:id="@+id/idMaquina"
+            android:id="@+id/idnome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:hint="ID da maquina"
+            android:hint="Nome"
             android:inputType="textPersonName"
             android:layout_marginRight="10dp"/>
 
         <EditText
-            android:id="@+id/dataCompraMaquina"
+            android:id="@+id/telefonePonto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:hint="Data da Compra"
+            android:hint="telefone"
             android:inputType="textPersonName"
             android:layout_marginRight="10dp"/>
 
         <EditText
-            android:id="@+id/capacidadeMaquina"
+            android:id="@+id/emailPonto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:hint="Capacidade"
+            android:hint="E-mail"
             android:inputType="textPersonName"
             android:layout_marginRight="10dp"/>
 
         <EditText
-            android:id="@+id/tipoMaquina"
+            android:id="@+id/cnpjPonto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:hint="Tipo"
+            android:hint="CNPJ"
             android:inputType="textPersonName"
             android:layout_marginRight="10dp"/>
     </LinearLayout>
@@ -143,34 +143,17 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout><![CDATA[
-
-    "
-        tools:ignore="OnClick" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
 
     <Button
-        android:id="@+id/botaoAlterarMaquina"
+        android:id="@+id/botaoAlterarPonto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/botaoredondo"
-        android:onClick=""
-        android:text="Alterar"
+                android:text="Alterar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
@@ -179,18 +162,17 @@
         app:layout_constraintVertical_bias="0.504" />
 
     <Button
-        android:id="@+id/botaoDeletarMaquina"
+        android:id="@+id/botaoDeletarPonto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/botaoredondo"
-        android:onClick=""
         android:text="Deletar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        tools:ignore="OnClick" />
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,7 +25,7 @@ public class GerenciaDadosMaquina extends AppCompatActivity {
 
         ContratoMaquina crud= new ContratoMaquina(getBaseContext());
         final Cursor cursor = crud.carregaDadosMaquina();
-        String[] nomeCampos= new String[]{CriaBanco.ID,CriaBanco.DATACOMPRA,CriaBanco.CAPACIDADE,CriaBanco.TIPOMAQUINA};
+        String[] nomeCampos= new String[]{CriaBanco.IDmaquina,CriaBanco.DATACOMPRA,CriaBanco.CAPACIDADE,CriaBanco.TIPOMAQUINA};
         int[] idViews= new int[]{R.id.idMaquina,R.id.dataCompraMaquina,R.id.capacidadeMaquina,R.id.tipoMaquina};
 
         SimpleCursorAdapter adaptador = new SimpleCursorAdapter(getBaseContext(),
@@ -39,7 +39,7 @@ public class GerenciaDadosMaquina extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent,View view,int position, long id) {
                 String codigo;
                 cursor.moveToPosition(position);
-                codigo= cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ID));
+                codigo= cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.IDmaquina));
                 Intent intent= new Intent(GerenciaDadosMaquina.this,AlterarListaMaquina.class);
                 intent.putExtra("codigo",codigo);
                 startActivity(intent);

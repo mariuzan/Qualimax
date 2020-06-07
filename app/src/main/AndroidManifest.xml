@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".data.gerenciaLista.AlterarListaMaquina"></activity>
+        <activity android:name=".data.gerenciaLista.AlterarListaPonto"></activity>
         <activity android:name=".data.model.ListaMaquinaCustomizada"></activity>
+        <activity android:name=".data.model.ListaPontoCustomizada"></activity>
         <activity android:name=".data.gerenciaLista.GerenciaDadosPonto" />
         <activity android:name=".data.VerDados" />
         <activity android:name=".data.gerenciaLista.GerenciaDadosMaquina" />

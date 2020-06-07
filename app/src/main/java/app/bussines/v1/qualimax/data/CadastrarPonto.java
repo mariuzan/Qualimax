@@ -1,73 +1,66 @@
 package app.bussines.v1.qualimax.data;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 
 import app.bussines.v1.qualimax.R;
-import app.bussines.v1.qualimax.data.model.DadosModelPonto;
-import app.bussines.v1.qualimax.data.model.Ponto;
+import app.bussines.v1.qualimax.data.banco.ContratoMaquina;
+import app.bussines.v1.qualimax.data.banco.ContratoPonto;
 
 public class CadastrarPonto extends AppCompatActivity {
-        DadosModelPonto dadosModelPonto = new DadosModelPonto();
-        int id;
+         //DadosModelMaquina dadosModelMaquina = new DadosModelMaquina();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_ponto);
-        Button botaoCadastro= findViewById(R.id.botaoCadastroPonto);
-
-        //aqui tem a ligação com a janela xml
-        final EditText pegaNome= findViewById(R.id.nomePonto);
-        final EditText pegaTelefone= findViewById(R.id.telefonePonto);
-        final EditText pegaEmail=findViewById(R.id.emailPonto);
-        final EditText pegaCnpj=findViewById(R.id.cnpjPonto);
+        Button botaoponto=findViewById(R.id.botaoCadastroPonto);
 
 
 
-        botaoCadastro.setOnClickListener(new View.OnClickListener() {
+        botaoponto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ContratoPonto crud= new ContratoPonto(getBaseContext());
+                //final EditText pegaIdMaquina=findViewById(R.id.idMaquina);
+                 EditText nome=(EditText) findViewById(R.id.nomePonto);
+                 EditText telefone=(EditText)findViewById(R.id.telefonePonto);
+                 EditText email=(EditText)findViewById(R.id.emailPonto);
+                 EditText cnpj=(EditText)findViewById(R.id.cnpjPonto);
 
-                    Ponto ponto= new Ponto(pegaNome.toString(),pegaTelefone.toString(),
-                            pegaEmail.toString(),pegaCnpj.toString());
+
+                 String nomePontoString=nome.getText().toString();
+                 String telefoneString=telefone.getText().toString();
+                 String emailString=email.getText().toString();
+                 String cnpjString=cnpj.getText().toString();
+                 String resultado;
+                 resultado=crud.InsereDadoPonto(nomePontoString,telefoneString,emailString,cnpjString);
+                 Toast.makeText(getApplicationContext(),resultado,Toast.LENGTH_LONG).show();
 
 
-                    dadosModelPonto.setListaPonto(id++,ponto);
+               /* metodo antigo
+               Maquina maquina= new Maquina(pegaIdMaquina.toString()
+                        ,pegaDataCompraMaquina.toString(),
+                        pegaCapacidadeMaquina.toString(),
+                        pegaTipoMaquina.toString());
 
+                     dadosModelMaquina.setListaMaquinaArray(maquina);
 
-                    Toast.makeText(getApplicationContext(),"Ponto Adicionado com sucesso  !",
-                            Toast.LENGTH_LONG).show();
-
-                }
+                Toast.makeText(getApplicationContext(),"Maquina Adicionada com Sucesso!! ",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"dasdas"+dadosModelMaquina.getListaMaquinaArray().toString(),Toast.LENGTH_LONG).show();*/
             }
+        });
 
-        );
+
+
+
+
 
     }
-
-
-    }
-
-
-    /* private  void salvaDados(EditText pegaNome, EditText pegaTelefone, EditText pegaEmail, EditText pegaCnpj){
-        ponto addPonto= new ponto(this.pegaNome, this.pegaTelefone, this.pegaEmail, this.pegaCnpj);
-        listaPonto.add(addPonto);
-
-         Toast.makeText(getApplicationContext(),"teste"+listaPonto.get(1),Toast.LENGTH_LONG).show();
-
-     }*/
-
-    /*public List<ponto> getListaPonto() {
-        return listaPonto;
-    }*/
-
-
+}
