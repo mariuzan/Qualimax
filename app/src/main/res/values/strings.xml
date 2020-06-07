@@ -16,5 +16,6 @@
     <string name="cadastrar_maquina">Cadastrar Maquina</string>
     <string name="gerenciar_dados">Gerenciar Dados</string>
     <string name="cadastrarPonto">Cadastrar Ponto</string>
+    <string name="AlterarDados">Alterar Dados</string>
 
 </resources>

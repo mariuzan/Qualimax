@@ -6,26 +6,26 @@ import android.os.Parcelable;
 import java.io.Serializable;
 
 public class Maquina implements Serializable {
-    private String idMaquina;
+    //private String idMaquina;
     private String dataCompraMaquina;
     private String capacidadeMaquina;
     private String tipoMaquina;
 
-    public Maquina(String idMaquina, String dataCompraMaquina, String capacidadeMaquina, String tipoMaquina) {
-        this.idMaquina = idMaquina;
+    public Maquina(String dataCompraMaquina, String capacidadeMaquina, String tipoMaquina) {
+       // this.idMaquina = idMaquina;
         this.dataCompraMaquina = dataCompraMaquina;
         this.capacidadeMaquina = capacidadeMaquina;
         this.tipoMaquina = tipoMaquina;
     }
 
 
-    public String getIdMaquina() {
+    /*public String getIdMaquina() {
         return idMaquina;
-    }
+    }*/
 
-    public void setIdMaquina(String idMaquina) {
+   /* public void setIdMaquina(String idMaquina) {
         this.idMaquina = idMaquina;
-    }
+    }*/
 
     public String getDataCompraMaquina() {
         return dataCompraMaquina;
